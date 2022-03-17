@@ -5,30 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Todo List</title>
+    <title>Code Quiz</title>
   </head>
   <body>
     <header>
       <h3>View Highscores</h3>
-      <h3>Time: 0</h3>
+      <h3 id="countdown"></h3>
     </header>
     <main>
       <!-- STARTING PAGE -->
       <div class="startingPage" data-number="1" data-state="visible">
         <h1>Coding Quiz</h1>
-        <p>try to  answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds</p>
+        <p>Try to  answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds</p>
+        <button id="start-quiz">Start Quiz</button>
       </div>
+
       <!-- QUIZ PROPER -->
-      <div class="questions" data-number="2" data-state="hidden">
-
+      <div class="questions1" data-number="2" data-state="hidden">
+        <h2>Commonly used data types <strong>DO NOT</strong> include:</h2>
+        <ol>
+          <button id="incorrect"><li>strings</li></button>
+          <button id="incorrect"><li>booleans</li></button>
+          <button id="correct"><li>alerts</li></button>
+          <button id="incorrect"><li>numbers</li></button>
+        </ol>
       </div>
+
+      <div class="questions2" data-number="3" data-state="hidden">
+        <h2>The condition in an if / else state is enclosed within ____.</h2>
+        <ol>
+          <button id="incorrect"><li>quotes</li></button>
+          <button id="incorrect"><li>curly brackets</li></button>
+          <button id="correct"><li>parentheses</li></button>
+          <button id="incorrect"><li>square brackets</li></button>
+        </ol>
+      </div>
+
+      <div class="questions3" data-number="4" data-state="hidden">
+        <h2>Arrays in JavaScript can be used to store ____.</h2>
+        <ol>
+          <button id="incorrect"><li>numbers and strings</li></button>
+          <button id="incorrect"><li>other arrays</li></button>
+          <button id="incorrect"><li>booleans</li></button>
+          <button id="correct"><li>all of the above</li></button>
+        </ol>
+      </div>
+
+      <div class="questions3" data-number="5" data-state="hidden">
+        <h2>String values must be enclosed withing _____ when being assigned to variables.</h2>
+        <ol>
+          <button id="incorrect"><li>commas</li></button>
+          <button id="incorrect"><li>curly brackets</li></button>
+          <button id="correct"><li>quotes</li></button>
+          <button id="incorrect"><li>parentheses</li></button>
+        </ol>
+      </div>
+
+      <div class="questions3" data-number="6" data-state="hidden">
+        <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
+        <ol>
+          <button id="incorrect"><li>JavaScript</li></button>
+          <button id="incorrect"><li>terminal / bash</li></button>
+          <button id="incorrect"><li>for loops</li></button>
+          <button id="correct"><li>console.log</li></button>
+        </ol>
+      </div>
+
       <!-- ALL DONE -->
-      <div class="allDone" data-number="3" data-state="hidden">
-
+      <div class="allDone" data-number="7" data-state="hidden">
+        <h1>All done!</h1>
+        <p>Your final score is 22.</p>
+        <form method="POST">
+          <label for="initials">Enter Initials:</label>
+          <input type="text" name="initials" id="initials" placeholder="ABC" />
+        </form>
       </div>
-      <!-- HIGH SCORES -->
-      <div class="highScores" data-number="4" data-state="hidden">
 
+      <!-- HIGHSCORES -->
+      <div class="highScores" data-number="4" data-state="hidden">
+        <h1>Highscores</h1>
+        <ol>
+          <li>AB - 22</li>
+        </ol>
+        <button class="goBack">Go Back</button>
+        <button class="clearHighscores">Clear Highscores</button>
       </div>
     </main>
     <script src="./assets/js/script.js"></script>
