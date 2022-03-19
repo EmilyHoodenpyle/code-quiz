@@ -1,0 +1,75 @@
+/* color scheme sourced from http://khroma.co/generator/ */
+:root {
+    --light: #ebdde2 ;
+    --dark: #3b2391;
+    --midlight: #b88589;
+    --middark: #8d3b47;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--light)
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px auto;
+  color: var(--dark);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px auto;
+    color: var(--dark);
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px auto;
+    color: var(--dark);
+}
+
+.container {
+  width: 700px;
+  margin: 25px auto;
+}
+
+.box {
+    display:flex;
+    flex-direction: column;
+    float:center;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    background-color: var(--middark);
+    color: var(--light);
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--midlight);
+}
+
+@media (max-width: 740px) {
+  .box {
+    width: 48%;
+  }
+}
