@@ -1,3 +1,6 @@
+// CLICK EVENT (TIMER)
+var startBtnEl = document.getElementById('#start-quiz')
+
 //  TIMER
 var timerEl = document.getElementById('countdown');
 
@@ -16,6 +19,32 @@ function countdown() {
 }
 
 console.log(countdown())
+
+// INCORRECT ANSWER
+var count = timerEl;
+//  Select increment and decrement button elements
+var incorrectEl = document.querySelector("#incorrect");
+var correctEl = document.querySelector("#correct");
+var countEl = document.querySelector("#countdown");
+
+// Updates count on page
+function setCounterText() {
+  countEl.textContent = count;
+}
+// Attach event listener to increment button element
+incorrectEl.addEventListener("click", function() {
+  count++;
+  setCounterText();
+});
+
+// Attach event listener to decrement button element
+correctEl.addEventListener("click", function() {
+  // Action will fire if count is greater than  0
+  if (count > 0) {
+    count--;
+    setCounterText();
+  }
+});
 
 // HIDDEN ELEMENTS
 var container = document.querySelector(".container")
@@ -40,10 +69,10 @@ container.addEventListener("click", function(event) {
 // SUBMIT HIGHSCORE
 var submitEl = document.querySelector('#submit');
 var initialsInput = document.querySelector('#initials')
-function showResponse(event) {
-    event.preventDefault();
-    console.log(event);
-    var response = initialsInput.value + timeLeft;
+
+function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDiv.setAttribute("class", type);
 }
 
 // HIGHSCORE PAGE

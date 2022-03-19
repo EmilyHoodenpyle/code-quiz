@@ -2,7 +2,7 @@
 
 ## Description
 
-
+This is a five question, timed quiz created using HTML, CSS, and JavaScript.
 
 ## Table of Contents
 - [Installation](#installation)
