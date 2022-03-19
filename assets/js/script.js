@@ -27,7 +27,7 @@ container.addEventListener("click", function(event) {
         var state = element.getAttribute(data-state);
 
         if (state === hidden) {
-            element.textContent = element.dataset.number;
+            element.textContent = "element.dataset.number";
             element.dataset.state= "visible";
         } else {
             element.textContent ="";
