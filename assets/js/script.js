@@ -1,5 +1,46 @@
-// CLICK EVENT (TIMER)
-var startBtnEl = document.getElementById('#start-quiz')
+// BUTTON ELEMENTS
+var startBtnEl = document.getElementById('#start-quiz');
+var incorrectBtnEl = document.getElementById('#incorrect');
+var correctBtnEl = document.getElementById('#correct');
+var submitBtnEl = document.getElementById('#submit');
+var goBackBtnEl = document.getElementById('#goBack');
+var clearHighScoresBtnEl = document.getElementById('#clearHighScores');
+
+// DIV ELEMENTS
+var startingPageEl = document.getElementById('startingPage');
+var questionsEl = document.getElementById('questions');
+var allDoneEl = document.getElementById('allDone');
+var highScoresEl = document.getElementById ('highScores');
+
+// START BTN
+startBtnEl.addeventListener('click', function(event){
+    // do stuff here...
+});
+
+// INCORRECT BTN
+incorrectBtnEl.addeventListener('click', function(event){
+    // do stuff here...
+});
+
+// CORRECT BTN
+correctBtnEl.addeventListener('click', function(event){
+    // do stuff here...
+});
+
+// SUBMIT BTN
+submitBtnEl.addeventListener('click', function(event){
+    // do stuff here...
+});
+
+// GO BACK BTN
+goBackBtnEl.addeventListener('click', function(event){
+    // do stuff here...
+});
+
+// CLEAR HIGHSCORES BTN
+clearHighScoresBtnEl.addeventListener('click', function(event){
+    // do stuff here...
+});
 
 //  TIMER
 var timerEl = document.getElementById('countdown');
@@ -20,70 +61,11 @@ function countdown() {
 
 console.log(countdown())
 
-// INCORRECT ANSWER
-var count = timerEl;
-//  Select increment and decrement button elements
-var incorrectEl = document.querySelector("#incorrect");
-var correctEl = document.querySelector("#correct");
-var countEl = document.querySelector("#countdown");
+let language = "JavaScript";
 
-// Updates count on page
-function setCounterText() {
-  countEl.textContent = count;
-}
-// Attach event listener to increment button element
-incorrectEl.addEventListener("click", function() {
-  count.add(10, 'minutes')
-});
-
-// Attach event listener to decrement button element
-correctEl.addEventListener("click", function() {
-  // Action will fire if count is greater than  0
-  if (count > 0) {
-    count--;
-    setCounterText();
-  }
-});
-
-// HIDDEN ELEMENTS
-var container = document.querySelector(".container")
-
-container.addEventListener("click", function(event) {
-    var state = event.target;
-
-    if (element.matches(".box")) {
-        var state = element.getAttribute(data-state);
-
-        if (state === hidden) {
-            element.textContent = "element.dataset.number";
-            element.dataset.state= "visible";
-        } else {
-            element.textContent ="";
-            element.setAttribute("data-state", "hidden");
-        }
-    }
-
-});
-
-// SUBMIT HIGHSCORE
-var submitEl = document.querySelector('#submit');
-var initialsInput = document.querySelector('#initials')
-
-function displayMessage(type, message) {
-    msgDiv.textContent = message;
-    msgDiv.setAttribute("class", type);
+let text = "";
+for (let x of language) {
+text += x;
 }
 
-// HIGHSCORE PAGE
-var body =  document.body;
-var highscoreEl = document.createElement("div");
-var listEl = document.createElement("ol");
-var li1 = document.createElement("li")
-var li2 = document.createElement("li")
-var li3 = document.createElement("li")
-
-li1.textContent = initialsInput.value;
-
-body.appendChild(highscoreEl)
-highscoreEl.appendChild(listEl);
-listEl.appendChild(li1)
+console.log(text)
