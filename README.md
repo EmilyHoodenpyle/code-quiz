@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a five question, timed quiz created using HTML, CSS, and JavaScript.
+This is a five question, timed quiz created using HTML, CSS, and JavaScript. The quiz begin when the user clicks the 'start' button, at which point the timer is started and the first question appears on screen. One question should be shown at a time and if a question is answered incorrectly, ten seconds is subtracted from the timer. The quiz is finished either when the timer runs out or all questions are answered.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -15,7 +15,7 @@ In order to install this project, you will need to havev already installed Visua
 
 ## Credits
 
-
+Code created from scratch by me, based on inclass assignments for University of Washington's continuing education coding bootcamp.
 
 ## License
 

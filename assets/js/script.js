@@ -33,8 +33,7 @@ function setCounterText() {
 }
 // Attach event listener to increment button element
 incorrectEl.addEventListener("click", function() {
-  count++;
-  setCounterText();
+  count.add(10, 'minutes')
 });
 
 // Attach event listener to decrement button element
